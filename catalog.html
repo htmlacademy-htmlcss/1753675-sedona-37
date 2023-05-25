@@ -55,97 +55,95 @@
       </ul>
     </header>
 
-    <section class="catalog-products">
-      <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
+    <section class="catalog-filter">
+      <h2 class="visually-hidden">Фильтры для списка гостиниц</h2>
 
-      <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-
-        <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-caption">Инфраструктура:</legend>
-          <ul class="catalog-filter-list">
-            <li class="catalog-filter-item">
-              <label class="catalog-filter-option">
-                <input class="catalog-filter-input" type="checkbox" name="swimming-pool" checked>
+      <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+        <fieldset class="filter-group">
+          <legend class="filter-caption">Инфраструктура:</legend>
+          <ul class="filter-list">
+            <li class="filter-item">
+              <label class="filter-option">
+                <input class="filter-input" type="checkbox" name="swimming-pool" checked>
                 Бассейн
               </label>
             </li>
-            <li class="catalog-filter-item">
-              <label class="catalog-filter-option">
-                <input class="catalog-filter-input" type="checkbox" name="parking" checked>
+            <li class="filter-item">
+              <label class="filter-option">
+                <input class="filter-input" type="checkbox" name="parking" checked>
                 Парковка
               </label>
             </li>
-            <li class="catalog-filter-item">
-              <label class="catalog-filter-option">
-                <input class="catalog-filter-input" type="checkbox" name="wi-fi">
+            <li class="filter-item">
+              <label class="filter-option">
+                <input class="filter-input" type="checkbox" name="wi-fi">
                 Wi-Fi
               </label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-caption">Тип жилья:</legend>
-          <ul class="catalog-filter-list">
-            <li class="catalog-filter-item">
-              <label class="catalog-filter-option">
-                <input class="catalog-filter-input" type="radio" name="house-type" value="hotel" checked>
+        <fieldset class="filter-group">
+          <legend class="filter-caption">Тип жилья:</legend>
+          <ul class="filter-list">
+            <li class="filter-item">
+              <label class="filter-option">
+                <input class="filter-input" type="radio" name="house-type" value="hotel" checked>
                 Гостиница
               </label>
             </li>
-            <li class="catalog-filter-item">
-              <label class="catalog-filter-option">
-                <input class="catalog-filter-input" type="radio" name="house-type" value="motel">
+            <li class="filter-item">
+              <label class="filter-option">
+                <input class="filter-input" type="radio" name="house-type" value="motel">
                 Мотель
               </label>
             </li>
-            <li class="catalog-filter-item">
-              <label class="catalog-filter-option">
-                <input class="catalog-filter-input" type="radio" name="house-type" value="apartment">
+            <li class="filter-item">
+              <label class="filter-option">
+                <input class="filter-input" type="radio" name="house-type" value="apartment">
                 Апартаменты
               </label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-caption">Стоимость, ₽:</legend>
-          <ul class="catalog-filter-list">
-            <li class="catalog-filter-item">
+        <fieldset class="filter-group">
+          <legend class="filter-caption">Стоимость, ₽:</legend>
+          <ul class="filter-list">
+            <li class="filter-item">
               <label class="visually-hidden">
                 Минимальная цена
-                <input class="catalog-filter-input" type="text" name="min-price" value="0">
+                <input class="filter-input" type="text" name="min-price" value="0">
               </label>
             </li>
-            <li class="catalog-filter-item">
+            <li class="filter-item">
               <label class="visually-hidden">
                 Максимальная цена
-                <input class="catalog-filter-input" type="text" name="max-price" value="9000">
+                <input class="filter-input" type="text" name="max-price" value="9000">
               </label>
             </li>
           </ul>
-          <ul class="catalog-filter-list">
-            <li class="catalog-filter-item">
+          <ul class="filter-list">
+            <li class="filter-item">
               <label class="visually-hidden">
                 Минимальный диапазон стоимости
-                <input class="catalog-filter-input" type="range" name="min-price-range" min="0" max="12000" value="0" step="100">
+                <input class="filter-input" type="range" name="min-price-range" min="0" max="12000" value="0" step="100">
               </label>
             </li>
-            <li class="catalog-filter-item">
+            <li class="filter-item">
               <label class="visually-hidden">
                 Минимальный диапазон стоимости
-                <input class="catalog-filter-input" type="range" name="max-price-range" min="0" max="12000" value="9000" step="100">
+                <input class="filter-input" type="range" name="max-price-range" min="0" max="12000" value="9000" step="100">
               </label>
             </li>
           </ul>
         </fieldset>
 
-        <button class="button catalog-filter-button" type="submit">Применить</button>
-        <button class="button catalog-filter-button" type="reset">Сбросить</button>
-
+        <button class="button filter-button" type="submit">Применить</button>
+        <button class="button filter-button" type="reset">Сбросить</button>
       </form>
-
     </section>
+
   </main>
 
   <footer class="page-footer">
