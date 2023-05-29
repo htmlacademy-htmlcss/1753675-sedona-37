@@ -30,6 +30,7 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  text-align: center;
   color: var(--black);
   background-color: var(--white);
   margin: 0;
@@ -58,7 +59,6 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--white);
@@ -71,7 +71,6 @@ body {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  text-align: center;
   text-decoration: none;
   color: inherit;
 }
@@ -99,10 +98,6 @@ body {
 }
 
 /* Преимущества */
-
-.advantages {
-  text-align: center;
-}
 
 .advantages-title {
   font-size: 30px;
@@ -143,4 +138,124 @@ body {
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
+}
+
+/* Советы */
+
+.adviсe-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.advice-subtitle {
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--dark-gray);
+}
+
+.advice-item:not(.advice-item:nth-child(2)) {
+  background-color: var(--second-blue);
+}
+
+.advice-heading {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advice-description {
+  color: var(--dark-gray);
+}
+
+/* Поиск отеля */
+
+.hotel-search-title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.hotel-search-subtitle {
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--dark-gray);
+}
+
+.hotel-search-button {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* Подписка */
+
+.subscribe {
+  color: var(--white);
+  background-color: var(--dark-gray);
+  background-image: url("../images/subscribe-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.subscribe h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.subscribe p {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.subscribe-button {
+  background-color: var(--first-blue);
+  font-size: 20px;
+  line-height: 36px;
+}
+
+/* Подвал */
+
+.footer-social-icon {
+  display: inline-block;
+  width: 47px;
+  height: 40px;
+}
+
+.footer-social-icon.vkontakte {
+  background-image: url("../images/social/vk.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-social-icon.telegram {
+  background-image: url("../images/social/telegram.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-social-icon.youtube {
+  background-image: url("../images/social/youtube.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  font-style: normal;
+  text-decoration: none;
+  color: inherit;
+}
+
+.htmlacademy-link {
+  display: inline-block;
+  width: 115px;
+  height: 33px;
+  background-image: url("../images/html-academy-logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
