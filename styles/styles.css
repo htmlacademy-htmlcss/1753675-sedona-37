@@ -320,3 +320,103 @@ body {
 .filter-button[type="reset"] {
   background-color: transparent;
 }
+
+/* Список гостиниц */
+
+.catalog-hotels-found {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.sort-control {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.button-view {
+  background-color: var(--white);
+}
+
+.show-cards {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/view-mode/many-cards.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.show-card {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/view-mode/one-card.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.show-list {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/view-mode/list.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Карточки */
+
+.hotels-card {
+  text-align: start;
+  color: var(--dark-gray);
+}
+
+.hotels-card-link {
+  text-decoration: none;
+}
+
+.hotels-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--black);
+}
+
+.hotels-card-price {
+  font-weight: 400;
+}
+
+.hotels-card-button[type="button"] {
+  background-color: var(--first-blue);
+}
+
+.hotels-card-button-active[type="button"] {
+  background-color: var(--green);
+}
+
+.hotels-card-rating {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* Пагинация */
+
+.pagination-link {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-decoration: none;
+  background-color: var(--first-blue);
+  color: var(--white);
+}
+
+.pagination-link-current {
+  background-color: var(--light-gray);
+  color: var(--black);
+}
