@@ -59,6 +59,7 @@ body {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: var(--white);
@@ -258,4 +259,64 @@ body {
   background-image: url("../images/html-academy-logo.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+/* Шапка каталога */
+
+.catalog-wrapper {
+  background-image: url("../images/filter-background.jpg");
+  background-repeat: no-repeat;
+  background-color: var(--dark-gray);
+  color: var(--white);
+  text-align: start;
+}
+
+.catalog-header-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+
+}
+
+.breadcrumps-link {
+  font-size: 16px;
+
+}
+
+.breadcrumps-link.home {
+  display: inline-block;
+  width: 13px;
+  height: 15px;
+  background-image: url("../images/breadcrumps/home.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Фильтры каталога */
+
+.filter-caption {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.filter-option {
+  line-height: 23px;
+}
+
+.filter-input[name="min-price"],
+.filter-input[name="max-price"] {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.filter-button[type="submit"] {
+  background-color: var(--first-blue);
+}
+
+.filter-button[type="reset"] {
+  background-color: transparent;
 }
