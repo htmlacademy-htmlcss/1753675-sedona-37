@@ -218,6 +218,12 @@ body {
   line-height: 36px;
 }
 
+.subscribe-field {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 /* Подвал */
 
 .footer-social-icon {
