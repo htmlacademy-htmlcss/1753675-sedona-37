@@ -98,6 +98,16 @@ body {
   color: var(--white);
 }
 
+/* Первый экран - "Hero" секция */
+
+.hero {
+  width: 100%;
+  height: 485px;
+  background-image: url("../images/hero/divider.svg"), url("../images/hero/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom, center;
+}
+
 /* Преимущества */
 
 .advantages-title {
