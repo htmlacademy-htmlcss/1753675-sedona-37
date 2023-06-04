@@ -80,6 +80,28 @@ body {
 
 /* Навигация */
 
+.navigation {
+  display: flex;
+}
+
+.navigation-logo {
+  margin-right: 28px;
+}
+
+.navigation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 339px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-user {
+  max-width: 338px;
+  margin-left: auto;
+}
+
 .navigation-link {
   font-size: 20px;
   font-weight: 700;
@@ -88,10 +110,18 @@ body {
   color: inherit;
 }
 
+.navigation-link:not(.button) {
+  padding: 20px 16px;
+}
+
+.navigation-user .navigation-link:not(.button) {
+  padding: 22px 12px;
+}
+
 .navigation-link.search {
   display: inline-block;
-  width: 44px;
-  height: 64px;
+  width: 20px;
+  height: 20px;
   background-image: url("../images/search-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -99,8 +129,8 @@ body {
 
 .navigation-link.favourite {
   display: inline-block;
-  width: 44px;
-  height: 64px;
+  width: 20px;
+  height: 20px;
   background-image: url("../images/favourite-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -108,6 +138,8 @@ body {
 
 .navigation-link.button {
   color: var(--white);
+  padding: 8px 34px;
+  margin-left: 20px;
 }
 
 /* Первый экран - "Hero" секция */
@@ -118,6 +150,10 @@ body {
   background-image: url("../images/hero/divider.svg"), url("../images/hero/hero-background.jpg");
   background-repeat: no-repeat;
   background-position: center bottom, center;
+}
+
+.hero-image {
+  margin-top: 51px;
 }
 
 /* Преимущества */
@@ -139,8 +175,17 @@ body {
   color: var(--dark-gray);
 }
 
+.advantages-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .advantages-item {
   background-color: var(--second-blue);
+  width: 400px;
 }
 
 .advantages-item:nth-child(3) {
@@ -150,6 +195,7 @@ body {
 .advantages-item-img {
   color: var(--white);
   background-color: var(--first-blue);
+  flex-basis: 1200px;
 }
 
 .advantages-item-img .advantages-description {
@@ -178,6 +224,18 @@ body {
   color: var(--dark-gray);
 }
 
+.advice-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.advice-item {
+  flex-basis: 400px;
+  padding: 81px 85px;
+}
+
 .advice-item:not(.advice-item:nth-child(2)) {
   background-color: var(--second-blue);
 }
@@ -187,6 +245,7 @@ body {
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
+  margin-top: 102px;
 }
 
 .advice-description {
@@ -247,6 +306,22 @@ body {
 }
 
 /* Подвал */
+
+.page-footer {
+  padding-left: 70px;
+  padding-right: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 142px;
+  display: flex;
+}
 
 .footer-social-icon {
   display: inline-block;
