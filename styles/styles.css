@@ -372,6 +372,7 @@ body {
   background-color: var(--dark-gray);
   color: var(--white);
   text-align: start;
+  padding: 35px 70px 70px;
 }
 
 .catalog-header-title {
@@ -381,9 +382,15 @@ body {
 
 }
 
+.breadcrumps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
 .breadcrumps-link {
   font-size: 16px;
-
 }
 
 .breadcrumps-link.home {
@@ -397,11 +404,29 @@ body {
 
 /* Фильтры каталога */
 
+.filter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-wrapper {
+  display: flex;
+  gap: 70px;
+}
+
 .filter-caption {
+  padding: 0;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
+}
+
+.filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+  flex-basis: 150px;
 }
 
 .filter-option {
@@ -426,17 +451,33 @@ body {
 
 /* Список гостиниц */
 
+.catalog-hotels-header {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
 .catalog-hotels-found {
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+  margin-right: auto;
 }
 
 .sort-control {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  width: 292px;
+}
+
+.view-wrapper {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .button-view {
@@ -506,6 +547,14 @@ body {
 }
 
 /* Пагинация */
+
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+}
 
 .pagination-link {
   display: inline-block;
