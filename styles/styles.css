@@ -77,12 +77,17 @@ body {
   text-transform: uppercase;
   color: var(--white);
   background-color: var(--brown);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 50px;
 }
 
 /* Навигация */
 
 .navigation {
   display: flex;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .navigation-logo {
@@ -93,7 +98,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 339px;
+  max-width: 460px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -142,6 +147,8 @@ body {
   color: var(--white);
   padding: 8px 34px;
   margin-left: 20px;
+  border: none;
+  border-radius: 4px;
 }
 
 /* Первый экран - "Hero" секция */
@@ -216,7 +223,7 @@ body {
   display: flex;
 }
 
-.advantages-item:nth-child(5n) {
+.advantages-item:nth-child(8n+5) {
   flex-direction: row-reverse;
 }
 
@@ -265,14 +272,16 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .advice-item {
+  box-sizing: border-box;
   flex-basis: 400px;
   padding: 81px 85px;
 }
 
-.advice-item:not(.advice-item:nth-child(2)) {
+.advice-item:not(.advice-item:nth-child(2n)) {
   background-color: var(--second-blue);
 }
 
@@ -354,6 +363,7 @@ body {
   background-color: var(--first-blue);
   font-size: 20px;
   line-height: 36px;
+  border-radius: 0 4px 4px 0;
 }
 
 .subscribe-field {
@@ -381,6 +391,7 @@ body {
   padding: 0;
   width: 142px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-social-icon {
@@ -490,6 +501,7 @@ body {
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
+  margin-bottom: 32px;
 }
 
 .filter-group {
@@ -499,24 +511,65 @@ body {
   flex-basis: 150px;
 }
 
+.filter-group-price {
+  min-width: 288px;
+}
+
+.filter-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-list-price {
+  display: flex;
+  gap: 2px;
+}
+
+.filter-item {
+  margin-bottom: 16px;
+}
+
 .filter-option {
   line-height: 23px;
 }
 
 .filter-input[name="min-price"],
 .filter-input[name="max-price"] {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 143px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+  margin: 0;
+  padding: 12px 20px;
+  border: none;
+}
+
+.filter-input[name="min-price"] {
+  border-radius: 4px 0 0 4px;
+}
+
+.filter-input[name="max-price"] {
+  border-radius: 0 4px 4px 0;
+}
+
+.button-wrapper {
+  padding-top: 56px;
 }
 
 .filter-button[type="submit"] {
+  display: block;
   background-color: var(--first-blue);
+  border: none;
+  margin-bottom: 32px;
 }
 
 .filter-button[type="reset"] {
   background-color: transparent;
+  border: none;
 }
 
 /* Список гостиниц */
@@ -545,17 +598,29 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  width: 292px;
+  min-width: 292px;
+  padding: 12px 16px;
+  background-color: var(--white);
+  border: 2px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
 }
 
 .view-wrapper {
   width: 160px;
   display: flex;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .button-view {
   background-color: var(--white);
+  border: 2px solid rgba(229, 229, 229, 1);
+  border-radius: 4px;
+  padding: 0;
+}
+
+.button-view-active {
+  border: 2px solid var(--black);
 }
 
 .show-cards {
@@ -612,6 +677,13 @@ body {
 
 .hotels-card-price {
   font-weight: 400;
+}
+
+.hotels-card-button {
+  display: inline-block;
+  min-width: 140px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .hotels-card-button[type="button"] {
