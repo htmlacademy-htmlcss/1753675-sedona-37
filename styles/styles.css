@@ -22,6 +22,7 @@
   --third-blue: rgba(131, 179, 211, 0.2);
   --dark-gray: rgba(51, 51, 51, 1);
   --light-gray: rgba(242, 242, 242, 1);
+  --border-gray: rgba(230, 230, 230, 1);
   --brown: rgba(117, 97, 87, 1);
   --green: rgba(125, 181, 79, 1);
 }
@@ -48,6 +49,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   background-color: var(--white);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .main-container {
@@ -98,7 +100,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  max-width: 460px;
+  max-width: 500px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -110,6 +112,8 @@ body {
 }
 
 .navigation-link {
+  box-sizing: border-box;
+  display: block;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -126,18 +130,18 @@ body {
 }
 
 .navigation-link.search {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
+  display: block;
+  min-width: 44px;
+  min-height: 64px;
   background-image: url("../images/search-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .navigation-link.favourite {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
+  display: block;
+  min-width: 44px;
+  min-height: 64px;
   background-image: url("../images/favourite-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -149,16 +153,16 @@ body {
   margin-left: 20px;
   border: none;
   border-radius: 4px;
+  max-width: 230px;
 }
 
 /* Первый экран - "Hero" секция */
 
 .hero {
   width: 100%;
-  height: 485px;
-  background-image: url("../images/hero/divider.svg"), url("../images/hero/hero-background.jpg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  min-height: 485px;
+  /* Использовано общее св-во background из-за трудности указать разные background-size для множественного фона */
+  background: url("../images/hero/divider.svg") bottom/contain no-repeat, url("../images/hero/hero-background.jpg") center/cover no-repeat;
   margin-bottom: 69px;
 }
 
@@ -182,11 +186,11 @@ body {
 }
 
 .advantages-subtitle {
+  max-width: 700px;
   font-size: 22px;
   line-height: 26px;
   color: var(--dark-gray);
-  margin: 0;
-  margin-bottom: 90px;
+  margin: 0 auto 90px auto;
 }
 
 .advantages-description {
@@ -206,6 +210,11 @@ body {
   box-sizing: border-box;
   background-color: var(--second-blue);
   width: 400px;
+}
+
+.advantages-image {
+  object-fit: cover;
+  min-height: 100%;
 }
 
 .advantages-item:not(.advantages-item-img) {
@@ -260,10 +269,12 @@ body {
 }
 
 .advice-subtitle {
+  max-width: 700px;
   font-size: 22px;
   line-height: 26px;
   color: var(--dark-gray);
-  margin: 0;
+  margin-inline: auto;
+  margin-top: 0;
   margin-bottom: 64px;
 }
 
@@ -323,8 +334,12 @@ body {
 }
 
 .hotel-search-button {
+  display: block;
+  box-sizing: border-box;
+  max-width: 376px;
   font-size: 20px;
   line-height: 36px;
+  margin: auto;
 }
 
 /* Подписка */
@@ -334,17 +349,18 @@ body {
   background-color: var(--dark-gray);
   background-image: url("../images/subscribe-background.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 97px;
   padding-bottom: 105px;
 }
 
 .subscribe h2 {
+  max-width: 684px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
 }
 
 .subscribe p {
@@ -360,6 +376,7 @@ body {
 }
 
 .subscribe-button {
+  max-width: 232px;
   background-color: var(--first-blue);
   font-size: 20px;
   line-height: 36px;
@@ -397,7 +414,7 @@ body {
 .footer-social-icon {
   display: block;
   width: 47px;
-  height: 40px;
+  min-height: 40px;
 }
 
 .footer-social-icon.vkontakte {
@@ -433,7 +450,7 @@ body {
 .htmlacademy-link {
   display: inline-block;
   width: 115px;
-  height: 33px;
+  min-height: 33px;
   background-image: url("../images/html-academy-logo.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -476,7 +493,7 @@ body {
 .breadcrumps-link.home {
   display: block;
   width: 13px;
-  height: 15px;
+  min-height: 15px;
   padding: 3px;
   background-image: url("../images/breadcrumps/home.svg");
   background-repeat: no-repeat;
@@ -560,6 +577,10 @@ body {
   padding-top: 56px;
 }
 
+.filter-button {
+  max-width: 191px;
+}
+
 .filter-button[type="submit"] {
   display: block;
   background-color: var(--first-blue);
@@ -624,27 +645,27 @@ body {
 }
 
 .show-cards {
-  display: inline-block;
+  display: block;
   width: 48px;
-  height: 48px;
+  min-height: 48px;
   background-image: url("../images/view-mode/many-cards.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .show-card {
-  display: inline-block;
+  display: block;
   width: 48px;
-  height: 48px;
+  min-height: 48px;
   background-image: url("../images/view-mode/one-card.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .show-list {
-  display: inline-block;
+  display: block;
   width: 48px;
-  height: 48px;
+  min-height: 48px;
   background-image: url("../images/view-mode/list.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -657,15 +678,37 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 80px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 340px);
 }
 
 .hotels-card {
+  box-sizing: border-box;
+  min-width: 320px;
+  max-width: 340px;
   text-align: start;
   color: var(--dark-gray);
+  padding: 20px;
+  border: 1px solid var(--border-gray);
+  border-radius: 4px;
+}
+
+.hotels-card-content {
+  display: grid;
+  gap: 16px 20px;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin-top: 16px;
+}
+
+.hotels-card-image {
+  object-fit: cover;
 }
 
 .hotels-card-link {
   text-decoration: none;
+  grid-column: 1 / -1;
 }
 
 .hotels-card-title {
@@ -673,6 +716,12 @@ body {
   font-weight: 700;
   line-height: 28px;
   color: var(--black);
+  margin: 0;
+
+}
+
+.hotels-card-description {
+  margin: 0;
 }
 
 .hotels-card-price {
@@ -695,8 +744,16 @@ body {
 }
 
 .hotels-card-rating {
+  box-sizing: border-box;
+  max-width: 140px;
+  text-transform: uppercase;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
+  background-color: var(--light-gray);
+  border-radius: 4px;
+  padding: 8px 22px;
+  margin: 0;
 }
 
 /* Пагинация */
@@ -715,7 +772,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 60px;
-  height: 60px;
+  min-height: 60px;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
