@@ -15,16 +15,19 @@
 }
 
 :root {
-  --white: rgba(255, 255, 255, 1);
-  --black: rgba(0, 0, 0, 1);
-  --first-blue: rgba(130, 179, 211, 1);
-  --second-blue: rgba(131, 179, 211, 0.12);
-  --third-blue: rgba(131, 179, 211, 0.2);
-  --dark-gray: rgba(51, 51, 51, 1);
-  --light-gray: rgba(242, 242, 242, 1);
-  --border-gray: rgba(230, 230, 230, 1);
-  --brown: rgba(117, 97, 87, 1);
-  --green: rgba(125, 181, 79, 1);
+  --text-basic: rgba(0, 0, 0, 1);
+  --text-secondary: rgba(51, 51, 51, 1);
+  --background-basic-1: rgba(255, 255, 255, 1);
+  --background-basic-2: rgba(130, 179, 211, 1);
+  --background-secondary-1: rgba(131, 179, 211, 0.12);
+  --background-secondary-2: rgba(131, 179, 211, 0.2);
+  --button-basic: rgba(117, 97, 87, 1);
+  --button-select: rgba(125, 181, 79, 1);
+  --input-basic: rgba(63, 94, 114, 1);
+  --element-1: rgba(229, 229, 229, 1);
+  --element-2: rgba(242, 242, 242, 1);
+  --element-3: rgba(230, 230, 230, 1);
+  --shadow: rgba(0, 0, 0, 0.2);
 }
 
 html {
@@ -36,8 +39,8 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
-  color: var(--black);
-  background-color: var(--light-gray);
+  color: var(--text-basic);
+  background-color: var(--element-2);
   margin: 0;
   height: 100%;
 }
@@ -49,8 +52,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  background-color: var(--white);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background-color: var(--background-basic-1);
+  box-shadow: 0 0 15px var(--shadow);
 }
 
 .main-container {
@@ -78,13 +81,14 @@ body {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--white);
-  background-color: var(--brown);
+  color: var(--background-basic-1);
+  background-color: var(--button-basic);
   border: none;
   border-radius: 4px;
   padding-inline: 50px;
   padding-top: 8px;
   padding-bottom: 8px;
+  word-break: break-word;
 }
 
 /* Навигация */
@@ -154,7 +158,7 @@ body {
 }
 
 .navigation-link.button {
-  color: var(--white);
+  color: var(--background-basic-1);
   padding-inline: 34px;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -198,15 +202,16 @@ body {
   max-width: 700px;
   font-size: 22px;
   line-height: 26px;
-  color: var(--dark-gray);
+  color: var(--text-secondary);
   margin-inline: auto;
   margin-top: 0;
   margin-bottom: 90px;
 }
 
 .advantages-description {
-  color: var(--dark-gray);
+  color: var(--text-secondary);
   margin: 0;
+  word-break: break-word;
 }
 
 .advantages-list {
@@ -219,7 +224,7 @@ body {
 
 .advantages-item {
   box-sizing: border-box;
-  background-color: var(--second-blue);
+  background-color: var(--background-secondary-1);
   width: 400px;
 }
 
@@ -235,12 +240,12 @@ body {
 }
 
 .advantages-item:nth-child(3) {
-  background-color: var(--third-blue);
+  background-color: var(--background-secondary-2);
 }
 
 .advantages-item-img {
-  color: var(--white);
-  background-color: var(--first-blue);
+  color: var(--background-basic-1);
+  background-color: var(--background-basic-2);
   flex-basis: 100%;
   display: flex;
 }
@@ -250,7 +255,7 @@ body {
 }
 
 .advantages-item-img .advantages-description {
-  color: var(--white);
+  color: var(--background-basic-1);
 }
 
 .advantages-text-content {
@@ -268,6 +273,7 @@ body {
   margin-inline: auto;
   margin-top: 0;
   margin-bottom: 62px;
+  word-break: break-word;
 }
 
 /* Советы */
@@ -291,7 +297,7 @@ body {
   max-width: 700px;
   font-size: 22px;
   line-height: 26px;
-  color: var(--dark-gray);
+  color: var(--text-secondary);
   margin-inline: auto;
   margin-top: 0;
   margin-bottom: 64px;
@@ -314,7 +320,7 @@ body {
 }
 
 .advice-item:not(.advice-item:nth-child(2n)) {
-  background-color: var(--second-blue);
+  background-color: var(--background-secondary-1);
 }
 
 .advice-heading {
@@ -324,11 +330,13 @@ body {
   text-transform: uppercase;
   margin-top: 102px;
   margin-bottom: 30px;
+  word-break: break-word;
 }
 
 .advice-description {
-  color: var(--dark-gray);
+  color: var(--text-secondary);
   margin: 0;
+  word-break: break-word;
 }
 
 /* Поиск отеля */
@@ -343,7 +351,9 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  margin: 0;
+  max-width: 620px;
+  margin-inline: auto;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -351,7 +361,7 @@ body {
   max-width: 592px;
   font-size: 22px;
   line-height: 26px;
-  color: var(--dark-gray);
+  color: var(--text-secondary);
   margin-inline: auto;
   margin-top: 0;
   margin-bottom: 54px;
@@ -369,8 +379,8 @@ body {
 /* Подписка */
 
 .subscribe {
-  color: var(--white);
-  background-color: var(--dark-gray);
+  color: var(--background-basic-1);
+  background-color: var(--text-secondary);
   background-image: url("../images/subscribe-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -405,7 +415,7 @@ body {
 
 .subscribe-button {
   max-width: 232px;
-  background-color: var(--first-blue);
+  background-color: var(--background-basic-2);
   font-size: 20px;
   line-height: 36px;
   border-radius: 0 4px 4px 0;
@@ -494,8 +504,8 @@ body {
   background-image: url("../images/filter-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: var(--dark-gray);
-  color: var(--white);
+  background-color: var(--text-secondary);
+  color: var(--background-basic-1);
   text-align: start;
   padding-inline: 70px;
   padding-top: 35px;
@@ -579,8 +589,12 @@ body {
   gap: 2px;
 }
 
-.filter-item {
+.filter-item:not(.filter-item:last-child) {
   margin-bottom: 16px;
+}
+
+.filter-group-price > .filter-list-price:last-child > .filter-item:first-child {
+  margin-bottom: 0;
 }
 
 .filter-option {
@@ -621,7 +635,7 @@ body {
 
 .filter-button[type="submit"] {
   display: block;
-  background-color: var(--first-blue);
+  background-color: var(--background-basic-2);
   border: none;
   margin-bottom: 32px;
 }
@@ -663,8 +677,8 @@ body {
   padding-inline: 16px;
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: var(--white);
-  border: 2px solid rgba(229, 229, 229, 1);
+  background-color: var(--background-basic-1);
+  border: 2px solid var(--element-1);
   border-radius: 4px;
 }
 
@@ -676,14 +690,14 @@ body {
 }
 
 .button-view {
-  background-color: var(--white);
-  border: 2px solid rgba(229, 229, 229, 1);
+  background-color: var(--background-basic-1);
+  border: 2px solid var(--element-1);
   border-radius: 4px;
   padding: 0;
 }
 
 .button-view-active {
-  border: 2px solid var(--black);
+  border: 2px solid var(--text-basic);
 }
 
 .show-cards {
@@ -730,49 +744,55 @@ body {
   min-width: 320px;
   max-width: 340px;
   text-align: start;
-  color: var(--dark-gray);
+  color: var(--text-secondary);
   padding-inline: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border: 1px solid var(--border-gray);
+  border: 1px solid var(--element-3);
   border-radius: 4px;
-}
-
-.hotels-card-content {
-  display: grid;
-  gap: 16px 20px;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hotels-card-image {
   display: block;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .hotels-card-link {
   display: block;
   text-decoration: none;
-  grid-column: 1 / -1;
+  margin-bottom: 16px;
+}
+
+.hotels-card-heading {
+  flex-grow: 1;
 }
 
 .hotels-card-title {
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
-  color: var(--black);
+  color: var(--text-basic);
   margin: 0;
+}
 
+.hotels-card-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  align-items: center;
 }
 
 .hotels-card-description {
   margin: 0;
+  word-break: break-word;
 }
 
 .hotels-card-price {
   font-weight: 400;
+  justify-self: end;
 }
 
 .hotels-card-button {
@@ -782,11 +802,11 @@ body {
 }
 
 .hotels-card-button[type="button"] {
-  background-color: var(--first-blue);
+  background-color: var(--background-basic-2);
 }
 
 .hotels-card-button-active[type="button"] {
-  background-color: var(--green);
+  background-color: var(--button-select);
 }
 
 .hotels-card-rating {
@@ -796,7 +816,7 @@ body {
   text-align: center;
   font-size: 16px;
   line-height: 20px;
-  background-color: var(--light-gray);
+  background-color: var(--element-2);
   border-radius: 4px;
   padding-inline: 22px;
   padding-top: 8px;
@@ -825,11 +845,11 @@ body {
   font-weight: 700;
   line-height: 36px;
   text-decoration: none;
-  background-color: var(--first-blue);
-  color: var(--white);
+  background-color: var(--background-basic-2);
+  color: var(--background-basic-1);
 }
 
 .pagination-link-current {
-  background-color: var(--light-gray);
-  color: var(--black);
+  background-color: var(--element-2);
+  color: var(--text-basic);
 }
