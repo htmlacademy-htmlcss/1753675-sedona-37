@@ -95,11 +95,21 @@ body {
 
 .navigation {
   display: flex;
+  align-items: flex-start;
   padding-inline: 70px;
 }
 
 .navigation-logo {
   margin-inline-end: 28px;
+  z-index: 1;
+}
+
+.page-header {
+  margin-bottom: -6px;
+}
+
+.page-header-logo {
+  display: block;
 }
 
 .navigation-list {
@@ -155,6 +165,24 @@ body {
   background-image: url("../images/favourite-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+}
+
+.favourite-number {
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+  color: var(--background-basic-1);
+  background-color: var(--button-select);
+  border-radius: 10px;
+  position: absolute;
+  top: 11px;
+  left: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navigation-link.button {
@@ -836,11 +864,13 @@ body {
 }
 
 .pagination-link {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  min-height: 60px;
+  min-width: 60px;
+  height: 60px;
+  padding-inline: 12px;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
