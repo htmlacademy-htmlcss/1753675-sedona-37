@@ -135,6 +135,7 @@ body {
   line-height: 24px;
   text-decoration: none;
   color: inherit;
+  position: relative;
 }
 
 .navigation-link:not(.button) {
@@ -194,6 +195,16 @@ body {
   border: none;
   border-radius: 4px;
   max-width: 230px;
+}
+
+.navigation-link-current::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: -1px;
+  left: 16px;
+  right: 16px;
+  background-color: var(--button-basic);
 }
 
 /* Первый экран - "Hero" секция */
@@ -300,8 +311,25 @@ body {
   text-transform: uppercase;
   margin-inline: auto;
   margin-top: 0;
-  margin-bottom: 62px;
+  padding-bottom: 32px;
+  margin-bottom: 30px;
   word-break: break-word;
+  position: relative;
+}
+
+.advantages-heading::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 60px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
+.advantages-item-img .advantages-heading::after {
+  background-color: rgba(255, 255, 255, 0.30);
 }
 
 /* Советы */
@@ -356,9 +384,36 @@ body {
   font-weight: 700;
   line-height: 28px;
   text-transform: uppercase;
-  margin-top: 102px;
+  padding-top: 102px;
+  margin-top: 0;
   margin-bottom: 30px;
   word-break: break-word;
+  position: relative;
+}
+
+.advice-heading::before {
+  content: "";
+  position: absolute;
+  min-width: 75px;
+  min-height: 72px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.housing .advice-heading::before {
+  background-image: url('../images/advice/advice-housing.svg');
+}
+
+.food .advice-heading::before {
+  background-image: url('../images/advice/advice-food.svg');
+}
+
+.souvenir .advice-heading::before {
+  background-image: url('../images/advice/advice-souvenir.svg');
 }
 
 .advice-description {
@@ -555,7 +610,30 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+}
+
+.breadcrumps-item {
+  position: relative;
+  margin-inline-end: 29px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.breadcrumps-item::after {
+  content: "";
+  position: absolute;
+  min-width: 7px;
+  min-height: 10px;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  background-image: url("../images/breadcrumps/arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.breadcrumps-item:last-child::after {
+  content: none;
 }
 
 .breadcrumps-link {
@@ -852,6 +930,26 @@ body {
   margin: 0;
 }
 
+.hotels-card-stars {
+  display: block;
+  height: 100%;
+  background-image: url("../images/star.svg");
+  background-repeat: repeat-x;
+  background-position: left center;
+}
+
+.four-stars {
+  max-width: 90px;
+}
+
+.three-stars {
+  max-width: 66px;
+}
+
+.two-stars {
+  max-width: 42px;
+}
+
 /* Пагинация */
 
 .pagination {
@@ -877,6 +975,7 @@ body {
   text-decoration: none;
   background-color: var(--background-basic-2);
   color: var(--background-basic-1);
+  border-radius: 4px;
 }
 
 .pagination-link-current {
