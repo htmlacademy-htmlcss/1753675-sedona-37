@@ -961,6 +961,25 @@ body {
   gap: 8px;
 }
 
+.pagination-item-hidden {
+  display: none;
+}
+
+.pagination-item:nth-of-type(4) {
+  position: relative;
+  margin-inline-end: 68px;
+}
+
+.pagination-item:nth-of-type(4)::after {
+  content: "...";
+  font-size: 22px;
+  line-height: 26px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  transform: translateY(-50%);
+}
 .pagination-link {
   box-sizing: border-box;
   display: flex;
