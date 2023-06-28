@@ -22,11 +22,15 @@
   --background-secondary-1: rgba(131, 179, 211, 0.12);
   --background-secondary-2: rgba(131, 179, 211, 0.2);
   --button-basic: rgba(117, 97, 87, 1);
+  --button-basic-hover: rgba(97, 80, 72, 1);
   --button-select: rgba(125, 181, 79, 1);
+  --button-select-hover: rgba(108, 158, 66, 1);
+  --button-secondary-hover: rgba(104, 162, 202, 1);
   --input-basic: rgba(63, 94, 114, 1);
   --element-1: rgba(229, 229, 229, 1);
   --element-2: rgba(242, 242, 242, 1);
   --element-3: rgba(230, 230, 230, 1);
+  --element-4: rgba(255, 255, 255, 0.3);
   --shadow: rgba(0, 0, 0, 0.2);
 }
 
@@ -89,6 +93,20 @@ body {
   padding-top: 8px;
   padding-bottom: 8px;
   word-break: break-word;
+}
+
+.button:hover {
+  background-color: var(--button-basic-hover);
+}
+
+.button:active,
+.navigation-link.button:active {
+  color: var(--element-4);
+}
+
+.button:disabled,
+a.button:not([href]) {
+  background-color: var(--element-1);
 }
 
 /* Навигация */
@@ -157,6 +175,11 @@ body {
   background-image: url("../images/search-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
+  transition: transform 0.3s;
+}
+
+.navigation-link.search:hover {
+  transform: scale(1.2);
 }
 
 .navigation-link.favourite {
@@ -167,6 +190,11 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  transition: transform 0.3s;
+}
+
+.navigation-link.favourite:hover {
+  transform: scale(1.2);
 }
 
 .favourite-number {
@@ -504,6 +532,10 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+.subscribe-button:hover {
+  background-color: var(--button-secondary-hover);
+}
+
 .subscribe-field {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -746,9 +778,25 @@ body {
   margin-bottom: 32px;
 }
 
+.filter-button[type="submit"]:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+.filter-button[type="submit"]:disabled {
+  background-color: var(--element-1);
+}
+
 .filter-button[type="reset"] {
   background-color: transparent;
   border: none;
+}
+
+.filter-button[type="reset"]:hover {
+  opacity: 0.6000000238418579;
+}
+
+.filter-button[type="reset"]:disabled {
+  opacity: 0.10000000149011612;
 }
 
 /* Список гостиниц */
@@ -911,8 +959,20 @@ body {
   background-color: var(--background-basic-2);
 }
 
+.hotels-card-button[type="button"]:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+.hotels-card-button[type="button"]:disabled {
+  background-color: var(--element-1);
+}
+
 .hotels-card-button-active[type="button"] {
   background-color: var(--button-select);
+}
+
+.hotels-card-button-active[type="button"]:hover {
+  background-color: var(--button-select-hover);
 }
 
 .hotels-card-rating {
