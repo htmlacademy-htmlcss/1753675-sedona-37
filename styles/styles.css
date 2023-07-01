@@ -492,6 +492,11 @@ a.button:not([href]) {
   padding-bottom: 105px;
 }
 
+.subscribe-catalog {
+  background: var(--background-basic-1);
+  color: var(--text-basic);
+}
+
 .subscribe h2 {
   max-width: 684px;
   font-size: 30px;
@@ -510,6 +515,10 @@ a.button:not([href]) {
   margin-inline: auto;
   margin-top: 0;
   margin-bottom: 54px;
+}
+
+.subscribe-catalog p {
+  color: var(--text-secondary);
 }
 
 .subscribe-form {
@@ -539,6 +548,10 @@ a.button:not([href]) {
   padding-inline: 20px;
   padding-top: 14px;
   padding-bottom: 14px;
+}
+
+.subscribe-catalog .subscribe-field {
+  background-color: var(--element-2);
 }
 
 /* Подвал */
