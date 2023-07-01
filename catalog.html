@@ -11,9 +11,12 @@
     <div class="container">
       <header class="page-header">
         <nav class="navigation">
-          <a class="navigation-logo" href="index.html">
-            <img class="page-header-logo" src="images/logo.svg" alt="Логотип города Седона." width="140" height="70">
-          </a>
+          <div class="navigation-logo ">
+            <img class="page-header-logo" src="images/logo.svg" alt="Логотип города Седона." width="140" height="70" usemap="#image-map">
+            <map name="image-map">
+                <area target="" href="index.html" coords="0,0,29,31,47,51,56,61,64,68,67,69,71,69,75,69,78,66,86,59,98,45,139,0,73,0" shape="poly">
+            </map>
+        </div>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
@@ -34,6 +37,7 @@
           <li class="navigation-item">
             <a class="navigation-link favourite" href="#">
               <span class="visually-hidden">Избранное.</span>
+              <span class="favourite-number">12</span>
             </a>
           </li>
           <li class="navigation-item">
@@ -53,7 +57,7 @@
                 </a>
               </li>
               <li class="breadcrumps-item">
-                <span>Гостиницы</span>
+                Гостиницы
               </li>
             </ul>
           </header>
@@ -174,7 +178,7 @@
                 <b class="hotels-card-price">От 4000 ₽</b>
                 <a class="button hotels-card-button" href="#">подробнее</a>
                 <button class="button hotels-card-button" type="button">в избранное</button>
-                <span class="hotels-card-stars"></span>
+                <span class="hotels-card-stars four-stars"></span>
                 <p class="hotels-card-rating">Рейтинг: <span>8,5</span></p>
               </div>
             </li>
@@ -190,7 +194,7 @@
                 <b class="hotels-card-price">От 5000 ₽</b>
                 <a class="button hotels-card-button" href="#">подробнее</a>
                 <button class="button hotels-card-button hotels-card-button-active" type="button">в избранном</button>
-                <span class="hotels-card-stars"></span>
+                <span class="hotels-card-stars four-stars"></span>
                 <p class="hotels-card-rating">Рейтинг: <span>9,2</span></p>
               </div>
             </li>
@@ -207,7 +211,7 @@
                 <b class="hotels-card-price">От 2500 ₽</b>
                 <a class="button hotels-card-button" href="#">подробнее</a>
                 <button class="button hotels-card-button" type="button">в избранное</button>
-                <span class="hotels-card-stars"></span>
+                <span class="hotels-card-stars three-stars"></span>
                 <p class="hotels-card-rating">Рейтинг: <span>6,9</span></p>
               </div>
             </li>
@@ -224,7 +228,7 @@
                 <b class="hotels-card-price">От 1500 ₽</b>
                 <a class="button hotels-card-button" href="#">подробнее</a>
                 <button class="button hotels-card-button" type="button">в избранное</button>
-                <span class="hotels-card-stars"></span>
+                <span class="hotels-card-stars two-stars"></span>
                 <p class="hotels-card-rating">Рейтинг: <span>5,0</span></p>
               </div>
             </li>
@@ -242,19 +246,19 @@
             <li class="pagination-item">
               <a class="pagination-link" href="#">4</a>
             </li>
-            <li class="pagination-item">
+            <li class="pagination-item pagination-item-hidden">
               <a class="pagination-link" href="#">5</a>
             </li>
-            <li class="pagination-item">
+            <li class="pagination-item pagination-item-hidden">
               <a class="pagination-link" href="#">6</a>
             </li>
-            <li class="pagination-item">
+            <li class="pagination-item pagination-item-hidden">
               <a class="pagination-link" href="#">7</a>
             </li>
-            <li class="pagination-item">
+            <li class="pagination-item pagination-item-hidden">
               <a class="pagination-link" href="#">8</a>
             </li>
-            <li class="pagination-item">
+            <li class="pagination-item pagination-item-hidden">
               <a class="pagination-link" href="#">9</a>
             </li>
             <li class="pagination-item">
