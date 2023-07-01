@@ -208,6 +208,8 @@ a.button:not([href]) {
 }
 
 .navigation-link.button {
+  font-size: 16px;
+  line-height: 20px;
   color: var(--background-basic-1);
   padding-inline: 34px;
   padding-top: 8px;
@@ -215,7 +217,9 @@ a.button:not([href]) {
   margin-inline-start: 20px;
   border: none;
   border-radius: 4px;
-  max-width: 230px;
+  min-width: 160px;
+  max-width: 161px;
+  min-height: 36px;
 }
 
 .navigation-link-current::before {
@@ -320,8 +324,7 @@ a.button:not([href]) {
 
 .advantages-text-content {
   padding-inline: 85px;
-  padding-top: 102px;
-  padding-bottom: 102px;
+  padding-block: 102px;
 }
 
 .advantages-heading {
@@ -488,8 +491,9 @@ a.button:not([href]) {
   background-image: url("../images/subscribe-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 97px;
-  padding-bottom: 105px;
+  padding-block-start: 96px;
+  padding-block-end: 105px;
+  padding-inline: 200px;
 }
 
 .subscribe-catalog {
@@ -522,12 +526,14 @@ a.button:not([href]) {
 }
 
 .subscribe-form {
+  max-width: 684px;
+  margin-inline: auto;
   display: flex;
-  justify-content: center;
 }
 
 .subscribe-button {
-  max-width: 232px;
+  min-width: 232px;
+  max-width: 233px;
   background-color: var(--background-basic-2);
   font-size: 20px;
   line-height: 36px;
@@ -546,8 +552,8 @@ a.button:not([href]) {
   border: none;
   border-radius: 4px 0 0 4px;
   padding-inline: 20px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-block: 12px;
+  background-color: var(--element-2);
 }
 
 .subscribe-catalog .subscribe-field {
@@ -558,8 +564,8 @@ a.button:not([href]) {
 
 .page-footer {
   padding-inline: 70px;
-  padding-top: 45px;
-  padding-bottom: 35px;
+  padding-block-start: 44px;
+  padding-block-end: 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -634,6 +640,10 @@ a.button:not([href]) {
 
 .footer-social-icon.youtube:active::after {
   opacity: 0.3;
+}
+
+.footer-contacts {
+  max-width: 350px;
 }
 
 .footer-contacts-phone {
@@ -896,21 +906,32 @@ a.button:not([href]) {
   margin-inline-end: auto;
 }
 
+.sort-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 292px;
+}
+
 .sort-control {
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
+  font: inherit;
   line-height: 21px;
-  min-width: 292px;
-  padding-inline: 16px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  width: 100%;
+  padding-inline-start: 18px;
+  padding-inline-end: 52px;
+  padding-block: 12px;
   background-color: var(--background-basic-1);
+  background-image: url("../images/arrow-select.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
   border: 2px solid var(--element-1);
   border-radius: 4px;
+  appearance: none;
 }
 
 .view-wrapper {
   width: 160px;
+  align-self: flex-start;
   display: flex;
   justify-content: space-between;
   gap: 8px;
@@ -921,6 +942,10 @@ a.button:not([href]) {
   border: 2px solid var(--element-1);
   border-radius: 4px;
   padding: 0;
+  display: block;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
 }
 
 .button-view-active {
@@ -937,27 +962,18 @@ a.button:not([href]) {
 }
 
 .show-cards {
-  display: block;
-  width: 48px;
-  min-height: 48px;
   background-image: url("../images/view-mode/many-cards.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .show-card {
-  display: block;
-  width: 48px;
-  min-height: 48px;
   background-image: url("../images/view-mode/one-card.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .show-list {
-  display: block;
-  width: 48px;
-  min-height: 48px;
   background-image: url("../images/view-mode/list.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -970,10 +986,12 @@ a.button:not([href]) {
   margin: 0;
   padding: 0;
   padding-block: 40px;
-  margin-bottom: 40px;
+  margin-block-end: 40px;
+  margin-block-start: -1px;
+  margin-inline-start: -1px;
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(3, 340px);
+  gap: 18px;
+  grid-template-columns: repeat(3, 342px);
   border-bottom: 1px solid var(--element-3);
 }
 
@@ -994,7 +1012,6 @@ a.button:not([href]) {
 
 .hotels-card-image {
   display: block;
-  width: 100%;
   object-fit: contain;
 }
 
@@ -1020,7 +1037,6 @@ a.button:not([href]) {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px 20px;
-  align-items: center;
 }
 
 .hotels-card-description {
@@ -1076,7 +1092,7 @@ a.button:not([href]) {
 
 .hotels-card-stars {
   display: block;
-  height: 100%;
+  height: 36px;
   background-image: url("../images/star.svg");
   background-repeat: repeat-x;
   background-position: left center;
