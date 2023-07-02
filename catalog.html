@@ -70,19 +70,22 @@
                   <ul class="filter-list">
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="checkbox" name="swimming-pool" checked>
+                        <input class="filter-input visually-hidden" type="checkbox" name="swimming-pool" checked>
+                        <span class="filter-checkbox"></span>
                         Бассейн
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="checkbox" name="parking" checked>
+                        <input class="filter-input visually-hidden" type="checkbox" name="parking" checked>
+                        <span class="filter-checkbox"></span>
                         Парковка
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="checkbox" name="wi-fi">
+                        <input class="filter-input visually-hidden" type="checkbox" name="wi-fi">
+                        <span class="filter-checkbox"></span>
                         Wi-Fi
                       </label>
                     </li>
@@ -93,19 +96,22 @@
                   <ul class="filter-list">
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="radio" name="house-type" value="hotel" checked>
+                        <input class="filter-input visually-hidden" type="radio" name="house-type" value="hotel" checked>
+                        <span class="filter-radio"></span>
                         Гостиница
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="radio" name="house-type" value="motel">
+                        <input class="filter-input visually-hidden" type="radio" name="house-type" value="motel">
+                        <span class="filter-radio"></span>
                         Мотель
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="radio" name="house-type" value="apartment">
+                        <input class="filter-input visually-hidden" type="radio" name="house-type" value="apartment">
+                        <span class="filter-radio"></span>
                         Апартаменты
                       </label>
                     </li>
@@ -116,24 +122,26 @@
                 <fieldset class="filter-group filter-group-price">
                   <legend class="filter-caption">Стоимость, ₽:</legend>
                   <ul class="filter-list filter-list-price">
-                    <li class="filter-item">
+                    <li class="filter-item range-item-min">
                       <label class="visually-hidden" for="min-price">Минимальная цена.</label>
-                      <input class="filter-input" id="min-price" type="text" name="min-price" value="0">
+                      <input class="filter-input range-input" id="min-price" type="number" name="min-price" value="0">
                     </li>
-                    <li class="filter-item">
+                    <li class="filter-item range-item-max">
                       <label class="visually-hidden" for="max-price">Максимальная цена.</label>
-                      <input class="filter-input" id="max-price" type="text" name="max-price" value="9000">
+                      <input class="filter-input range-input" id="max-price" type="number" name="max-price" value="9000">
                     </li>
                   </ul>
-                  <ul class="filter-list filter-list-price">
-                    <li class="filter-item">
-                      <label class="visually-hidden" for="min-price-range">Минимальный диапазон стоимости.</label>
-                      <input class="filter-input" id="min-price-range" type="range" name="min-price-range" min="0" max="12000" value="0" step="100">
-                    </li>
-                    <li class="filter-item">
-                      <label class="visually-hidden" for="max-price-range">Минимальный диапазон стоимости.</label>
-                      <input class="filter-input" id="max-price-range" type="range" name="max-price-range" min="0" max="12000" value="9000" step="100">
-                    </li>
+                  <ul class="filter-list filter-list-price range">
+                    <div class="range-scale">
+                      <div class="range-bar" style="left: 0; width: 226px">
+                        <button class="range-toggle toggle-min" type="button">
+                          <span class="visually-hidden">Установить минимальную цену.</span>
+                        </button>
+                        <button class="range-toggle toggle-max" type="button">
+                          <span class="visually-hidden">Установить максимальную цену.</span>
+                        </button>
+                      </div>
+                    </div>
                   </ul>
                 </fieldset>
                 <div class="button-wrapper">
@@ -235,7 +243,7 @@
               </div>
             </li>
           </ul>
-          <ul class="pagination">
+          <ol class="pagination">
             <li class="pagination-item">
               <a class="pagination-link pagination-link-current" href="#">1</a>
             </li>
@@ -266,7 +274,7 @@
             <li class="pagination-item">
               <a class="pagination-link" href="#">10</a>
             </li>
-          </ul>
+          </ol>
         </section>
       </main>
       <section class="subscribe subscribe-catalog">
