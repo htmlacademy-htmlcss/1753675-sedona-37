@@ -97,8 +97,7 @@ body {
 
 .button:active,
 .navigation-link.button:active {
-  color: var(--background-basic-1);
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button:disabled,
@@ -1315,8 +1314,7 @@ a.button:not([href]) {
 }
 
 .pagination-link:active {
-  color: var(--background-basic-1);
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-link-current,
@@ -1401,17 +1399,24 @@ a.button:not([href]) {
 }
 
 .info-message {
-  display: none;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--text-secondary);
+  text-align: center;
+  padding-inline-start: 157px;
+  margin-block-start: 4px;
 }
 
-.tooltip-text {
-  display: none;
+.date-error-warning {
+  color: rgba(255, 87, 87, 1);
 }
 
 .booking-form {
   display: grid;
-  grid-template-columns: repeat(2, 247px);
-  gap: 48px 88px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 23px 88px;
 }
 
 .booking-form-label {
@@ -1427,13 +1432,23 @@ a.button:not([href]) {
 .booking-form-label-date {
   grid-column: 1 / -1;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .booking-form-label-date::after {
   content: "";
   width: 20px;
   height: 20px;
-  background-image: url("../");
+  background-image: url("../images/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.3;
+  position: absolute;
+  top: 14px;
+  right: 20px;
 }
 
 .booking-form-field {
@@ -1479,8 +1494,7 @@ a.button:not([href]) {
 }
 
 .booking-form-field-persons {
-  min-width: 31px;
-  max-width: 62px;
+  width: 31px;
   font: inherit;
   font-size: 18px;
   font-weight: 700;
@@ -1502,6 +1516,25 @@ a.button:not([href]) {
   line-height: 24px;
   padding-block: 18px;
   background-color: var(--element-5);
+  margin-block-start: 25px;
+  border-radius: 10px;
+}
+
+.booking-form-button:hover,
+.booking-form-button:focus,
+.booking-form-button:active {
+  background-color: var(--button-secondary-hover);
+}
+
+.booking-form-button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.tooltip {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  margin-inline-start: 59px;
 }
 
 .tooltip-toggle {
@@ -1515,5 +1548,44 @@ a.button:not([href]) {
   background-image: url("../images/info.svg");
   background-repeat: no-repeat;
   background-position: center;
-  margin-inline-start: 10px;
+}
+
+.tooltip-text {
+  box-sizing: border-box;
+  width: 256px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  text-align: left;
+  background-color: var(--text-secondary);
+  color: var(--background-basic-1);
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+  padding-inline: 21px 18px;
+  padding-block: 20px 23px;
+  position: absolute;
+  top: 100%;
+  margin-block-start: 15px;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 1;
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text:after {
+  content: "";
+  background-image: url("../images/triangle.svg");
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
 }
