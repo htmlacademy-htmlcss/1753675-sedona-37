@@ -1528,10 +1528,12 @@ a.button:not([href]) {
 
 .form-field-button.minus {
   background-image: url("../images/minus.svg");
+  border-radius: 4px 0 0 4px;
 }
 
 .form-field-button.plus {
   background-image: url("../images/plus.svg");
+  border-radius: 0 4px 4px 0;
 }
 
 .booking-form-field-persons {
@@ -1543,6 +1545,7 @@ a.button:not([href]) {
   text-align: center;
   padding-inline: 5px;
   padding-block: 14px;
+  border-radius: 0;
 }
 
 .booking-form-field-persons::-webkit-outer-spin-button,
