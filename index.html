@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Главная Седона | HTML Academy</title>
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -11,39 +12,36 @@
     <div class="container">
       <header class="page-header">
         <nav class="navigation">
-          <div class="navigation-logo ">
-            <img class="page-header-logo" src="images/logo.svg" alt="Логотип города Седона." width="140" height="70" usemap="#image-map">
-            <map name="image-map">
-                <area target="" href="#" coords="0,0,29,31,47,51,56,61,64,68,67,69,71,69,75,69,78,66,86,59,98,45,139,0,73,0" shape="poly">
-            </map>
-        </div>
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="#">Главная</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">О Cедоне</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
-          </li>
-        </ul>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link search" href="#">
-              <span class="visually-hidden">Поиск.</span>
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link favourite" href="#">
-              <span class="visually-hidden">Избранное.</span>
-              <span class="favourite-number">12</span>
-            </a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link button" href="catalog.html">Хочу сюда!</a>
-          </li>
-        </ul>
+          <a class="navigation-logo" href="index.html">
+            <img class="page-header-logo" src="images/logo.svg" alt="Логотип города Седона." width="140" height="70">
+          </a>
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link" href="index.html">Главная</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">О Cедоне</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link navigation-link-current" href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+          <ul class="navigation-list navigation-user">
+            <li class="navigation-item">
+              <a class="navigation-link search" href="#">
+                <span class="visually-hidden">Поиск.</span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link favourite" href="#">
+                <span class="visually-hidden">Избранное.</span>
+                <span class="favourite-number">12</span>
+              </a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link button" href="catalog.html">Хочу сюда!</a>
+            </li>
+          </ul>
         </nav>
       </header>
       <main class="main-container main-index">
@@ -159,15 +157,15 @@
         </section>
       </footer>
       <!-- Для открытия модального окна для проверки в Perfect Pixel нужно у элемента dialog установить атрибут open -->
-      <dialog class="modal">
+      <dialog class="modal" aria-labelledby="modal-heading">
         <div class="modal-wrapper">
           <header class="modal-header">
-            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <h2 class="modal-title" id="modal-heading">Поиск гостиницы в Седоне</h2>
             <button class="modal-close" type="button">
-              <span class="visually-hidden">Закрыть</span>
+              <span class="visually-hidden">Закрыть.</span>
             </button>
           </header>
-          <section class="modal-content">
+          <div class="modal-content">
             <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
               <div class="booking-form-group booking-form-label booking-form-label-date">
                 <label class="label-date-text" for="arrival-date">Дата заезда:</label>
@@ -182,9 +180,13 @@
               <div class="booking-form-group booking-form-label booking-form-label-persons">
                 <label class="label-persons-text" for="adults">Взрослые:</label>
                 <div class="booking-form-input">
-                  <button class="form-field-button minus" type="button"></button>
+                  <button class="form-field-button minus" type="button">
+                    <span class="visually-hidden">Уменьшить количество.</span>
+                  </button>
                   <input class="booking-form-field booking-form-field-persons" type="number" name="adults" id="adults" value="2" required>
-                  <button class="form-field-button plus" type="button"></button>
+                  <button class="form-field-button plus" type="button">
+                    <span class="visually-hidden">Увеличить количество.</span>
+                  </button>
                 </div>
               </div>
               <div class="booking-form-group booking-form-label booking-form-label-persons">
@@ -194,14 +196,18 @@
                   <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
                 </span>
                 <div class="booking-form-input">
-                  <button class="form-field-button minus" type="button"></button>
+                  <button class="form-field-button minus" type="button">
+                    <span class="visually-hidden">Уменьшить количество.</span>
+                  </button>
                   <input class="booking-form-field booking-form-field-persons" type="number" name="children" id="children" value="2" required>
-                  <button class="form-field-button plus" type="button"></button>
+                  <button class="form-field-button plus" type="button">
+                    <span class="visually-hidden">Увеличить количество.</span>
+                  </button>
                 </div>
               </div>
               <button class="button booking-form-button" type="submit">Найти</button>
             </form>
-          </section>
+          </div>
         </div>
       </dialog>
     </div>
