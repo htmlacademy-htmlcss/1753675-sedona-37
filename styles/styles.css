@@ -1479,8 +1479,9 @@ a.button:not([href]) {
 }
 
 .label-date-text {
-  align-self: center;
+  align-self: start;
   max-width: calc(100% - 440px);
+  padding-block-start: 14px;
 }
 
 .booking-form-field {
@@ -1488,6 +1489,11 @@ a.button:not([href]) {
   background-color: var(--element-2);
   border: none;
   border-radius: 4px;
+}
+
+.booking-form-field:hover,
+.booking-form-field:focus {
+  background-color: var(--element-3);
 }
 
 .booking-form-field-date {
@@ -1503,7 +1509,7 @@ a.button:not([href]) {
   background-position: right 23px top 15px;
 }
 
-.booking-form-group {
+.booking-form-input {
   display: flex;
   margin-inline-start: 46px;
 }
@@ -1555,9 +1561,9 @@ a.button:not([href]) {
   border-radius: 10px;
 }
 
-.booking-form-button:hover,
-.booking-form-button:focus,
-.booking-form-button:active {
+.booking-form-button:not(:disabled):hover,
+.booking-form-button:not(:disabled):focus,
+.booking-form-button:not(:disabled):active {
   background-color: var(--button-secondary-hover);
 }
 
