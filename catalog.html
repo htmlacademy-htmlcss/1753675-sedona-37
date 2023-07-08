@@ -70,19 +70,22 @@
                   <ul class="filter-list">
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="checkbox" name="swimming-pool" checked>
+                        <input class="filter-input visually-hidden" type="checkbox" name="swimming-pool" checked>
+                        <span class="filter-checkbox"></span>
                         Бассейн
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="checkbox" name="parking" checked>
+                        <input class="filter-input visually-hidden" type="checkbox" name="parking" checked>
+                        <span class="filter-checkbox"></span>
                         Парковка
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="checkbox" name="wi-fi">
+                        <input class="filter-input visually-hidden" type="checkbox" name="wi-fi">
+                        <span class="filter-checkbox"></span>
                         Wi-Fi
                       </label>
                     </li>
@@ -93,19 +96,22 @@
                   <ul class="filter-list">
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="radio" name="house-type" value="hotel" checked>
+                        <input class="filter-input visually-hidden" type="radio" name="house-type" value="hotel" checked>
+                        <span class="filter-radio"></span>
                         Гостиница
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="radio" name="house-type" value="motel">
+                        <input class="filter-input visually-hidden" type="radio" name="house-type" value="motel">
+                        <span class="filter-radio"></span>
                         Мотель
                       </label>
                     </li>
                     <li class="filter-item">
                       <label class="filter-option">
-                        <input class="filter-input" type="radio" name="house-type" value="apartment">
+                        <input class="filter-input visually-hidden" type="radio" name="house-type" value="apartment">
+                        <span class="filter-radio"></span>
                         Апартаменты
                       </label>
                     </li>
@@ -116,24 +122,26 @@
                 <fieldset class="filter-group filter-group-price">
                   <legend class="filter-caption">Стоимость, ₽:</legend>
                   <ul class="filter-list filter-list-price">
-                    <li class="filter-item">
+                    <li class="filter-item range-item-min">
                       <label class="visually-hidden" for="min-price">Минимальная цена.</label>
-                      <input class="filter-input" id="min-price" type="text" name="min-price" value="0">
+                      <input class="filter-input range-input" id="min-price" type="number" name="min-price" value="0">
                     </li>
-                    <li class="filter-item">
+                    <li class="filter-item range-item-max">
                       <label class="visually-hidden" for="max-price">Максимальная цена.</label>
-                      <input class="filter-input" id="max-price" type="text" name="max-price" value="9000">
+                      <input class="filter-input range-input" id="max-price" type="number" name="max-price" value="9000">
                     </li>
                   </ul>
-                  <ul class="filter-list filter-list-price">
-                    <li class="filter-item">
-                      <label class="visually-hidden" for="min-price-range">Минимальный диапазон стоимости.</label>
-                      <input class="filter-input" id="min-price-range" type="range" name="min-price-range" min="0" max="12000" value="0" step="100">
-                    </li>
-                    <li class="filter-item">
-                      <label class="visually-hidden" for="max-price-range">Минимальный диапазон стоимости.</label>
-                      <input class="filter-input" id="max-price-range" type="range" name="max-price-range" min="0" max="12000" value="9000" step="100">
-                    </li>
+                  <ul class="filter-list filter-list-price range">
+                    <div class="range-scale">
+                      <div class="range-bar" style="left: 0; width: 226px">
+                        <button class="range-toggle toggle-min" type="button">
+                          <span class="visually-hidden">Установить минимальную цену.</span>
+                        </button>
+                        <button class="range-toggle toggle-max" type="button">
+                          <span class="visually-hidden">Установить максимальную цену.</span>
+                        </button>
+                      </div>
+                    </div>
                   </ul>
                 </fieldset>
                 <div class="button-wrapper">
@@ -148,11 +156,13 @@
           <h2 class="visually-hidden">Список гостиниц.</h2>
           <header class="catalog-hotels-header">
             <p class="catalog-hotels-found">Найдено гостиниц: <span class="filter-result">38</span></p>
-            <select class="sort-control" aria-label="Сортировка">
-              <option value="cheap">Сначала дешевые</option>
-              <option value="expensive">Сначала дорогие</option>
-              <option value="popular">Сначала популярные</option>
-            </select>
+            <div class="sort-container">
+              <select class="sort-control" aria-label="Сортировка">
+                <option value="cheap">Сначала дешевые</option>
+                <option value="expensive">Сначала дорогие</option>
+                <option value="popular">Сначала популярные</option>
+              </select>
+            </div>
             <div class="view-wrapper">
               <a class="button button-view show-cards button-view-active" href="#">
                 <span class="visually-hidden">Показать карточки.</span>
@@ -233,7 +243,7 @@
               </div>
             </li>
           </ul>
-          <ul class="pagination">
+          <ol class="pagination">
             <li class="pagination-item">
               <a class="pagination-link pagination-link-current" href="#">1</a>
             </li>
@@ -264,10 +274,10 @@
             <li class="pagination-item">
               <a class="pagination-link" href="#">10</a>
             </li>
-          </ul>
+          </ol>
         </section>
       </main>
-      <section class="subscribe">
+      <section class="subscribe subscribe-catalog">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -313,6 +323,53 @@
             </a>
         </section>
       </footer>
+      <!-- Для открытия модального окна для проверки в Perfect Pixel нужно у элемента dialog установить атрибут open -->
+      <dialog class="modal">
+        <div class="modal-wrapper">
+          <header class="modal-header">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <button class="modal-close" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+          </header>
+          <section class="modal-content">
+            <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+              <div class="booking-form-group booking-form-label booking-form-label-date">
+                <label class="label-date-text" for="arrival-date">Дата заезда:</label>
+                <input class="booking-form-field booking-form-field-date date-error" type="text" name="arrival-date" id="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" required>
+                <span class="info-message date-error-warning">Мы не можем отправить вас в прошлое.</span>
+                </div>
+                <div class="booking-form-group booking-form-label booking-form-label-date">
+                  <label class="label-date-text" for="departure-date">Дата выезда:</label>
+                  <input class="booking-form-field booking-form-field-date date-valid" type="text" name="departure-date" id="departure-date" value="1 сентября 2023" placeholder="Укажите дату" required>
+                  <span class="info-message date-valid-info">На эти даты есть свободные номера. Пока есть.</span>
+                </div>
+              <div class="booking-form-group booking-form-label booking-form-label-persons">
+                <label class="label-persons-text" for="adults">Взрослые:</label>
+                <div class="booking-form-input">
+                  <button class="form-field-button minus" type="button"></button>
+                  <input class="booking-form-field booking-form-field-persons" type="number" name="adults" id="adults" value="2" required>
+                  <button class="form-field-button plus" type="button"></button>
+                </div>
+              </div>
+              <div class="booking-form-group booking-form-label booking-form-label-persons">
+                <label class="label-persons-text" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                <div class="booking-form-input">
+                  <button class="form-field-button minus" type="button"></button>
+                  <input class="booking-form-field booking-form-field-persons" type="number" name="children" id="children" value="2" required>
+                  <button class="form-field-button plus" type="button"></button>
+                </div>
+              </div>
+              <button class="button booking-form-button" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </dialog>
     </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

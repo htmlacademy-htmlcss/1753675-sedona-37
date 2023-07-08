@@ -50,7 +50,7 @@
         <section class="hero">
           <h1 class="visually-hidden">Город Седона.</h1>
           <img class="hero-image" src="images/hero/welcome.svg" alt="Добро пожаловать в великолепную Седону.
-          «Потому что Гранд-Каньон — отстой!»" width="458" height="371">
+          «Потому что Гранд-Каньон — отстой!»" width="458" height="352">
         </section>
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества.</h2>
@@ -79,7 +79,7 @@
             </li>
             <li class="advantages-item advantages-item-img">
               <div class="advantages-text-content">
-                <h3 class="advantages-heading">Там есть мост дьявола</h3>
+                <h3 class="advantages-heading">Там есть <br>мост дьявола</h3>
                 <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <img class="advantages-image" src="images/advantages/advantage-devils-bridge.jpg" alt="Мост дьявола - самая большая арка из природного песчаника." width="800" height="385">
@@ -158,6 +158,53 @@
             </a>
         </section>
       </footer>
+      <!-- Для открытия модального окна для проверки в Perfect Pixel нужно у элемента dialog установить атрибут open -->
+      <dialog class="modal">
+        <div class="modal-wrapper">
+          <header class="modal-header">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <button class="modal-close" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+          </header>
+          <section class="modal-content">
+            <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+              <div class="booking-form-group booking-form-label booking-form-label-date">
+                <label class="label-date-text" for="arrival-date">Дата заезда:</label>
+                <input class="booking-form-field booking-form-field-date date-error" type="text" name="arrival-date" id="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" required>
+                <span class="info-message date-error-warning">Мы не можем отправить вас в прошлое.</span>
+                </div>
+                <div class="booking-form-group booking-form-label booking-form-label-date">
+                  <label class="label-date-text" for="departure-date">Дата выезда:</label>
+                  <input class="booking-form-field booking-form-field-date date-valid" type="text" name="departure-date" id="departure-date" value="1 сентября 2023" placeholder="Укажите дату" required>
+                  <span class="info-message date-valid-info">На эти даты есть свободные номера. Пока есть.</span>
+                </div>
+              <div class="booking-form-group booking-form-label booking-form-label-persons">
+                <label class="label-persons-text" for="adults">Взрослые:</label>
+                <div class="booking-form-input">
+                  <button class="form-field-button minus" type="button"></button>
+                  <input class="booking-form-field booking-form-field-persons" type="number" name="adults" id="adults" value="2" required>
+                  <button class="form-field-button plus" type="button"></button>
+                </div>
+              </div>
+              <div class="booking-form-group booking-form-label booking-form-label-persons">
+                <label class="label-persons-text" for="children">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-children"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-children">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                <div class="booking-form-input">
+                  <button class="form-field-button minus" type="button"></button>
+                  <input class="booking-form-field booking-form-field-persons" type="number" name="children" id="children" value="2" required>
+                  <button class="form-field-button plus" type="button"></button>
+                </div>
+              </div>
+              <button class="button booking-form-button" type="submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </dialog>
     </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
