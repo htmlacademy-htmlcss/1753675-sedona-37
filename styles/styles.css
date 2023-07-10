@@ -44,10 +44,11 @@ body {
   font-size: 18px;
   line-height: 21px;
   text-align: center;
+  height: 100%;
+  min-width: 1280px;
   color: var(--text-basic);
   background-color: var(--element-2);
   margin: 0;
-  height: 100%;
   scrollbar-gutter: stable;
 }
 
@@ -396,11 +397,11 @@ a.button:not([href]) {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.30);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .advantages-item-img .advantages-heading::after {
-  background-color: rgba(255, 255, 255, 0.30);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Советы */
@@ -481,15 +482,15 @@ a.button:not([href]) {
 }
 
 .housing .advice-heading::before {
-  background-image: url('../images/advice/advice-housing.svg');
+  background-image: url("../images/advice/advice-housing.svg");
 }
 
 .food .advice-heading::before {
-  background-image: url('../images/advice/advice-food.svg');
+  background-image: url("../images/advice/advice-food.svg");
 }
 
 .souvenir .advice-heading::before {
-  background-image: url('../images/advice/advice-souvenir.svg');
+  background-image: url("../images/advice/advice-souvenir.svg");
 }
 
 .advice-description {
@@ -1407,6 +1408,7 @@ a.button:not([href]) {
   left: 90px;
   transform: translateY(-50%);
 }
+
 .pagination-link {
   box-sizing: border-box;
   display: flex;
@@ -1544,9 +1546,6 @@ a.button:not([href]) {
 
 .date-error-warning {
   color: rgba(255, 87, 87, 1);
-}
-
-.date-error-warning {
   display: none;
 }
 
@@ -1776,7 +1775,7 @@ a.button:not([href]) {
   background-color: var(--text-secondary);
   color: var(--background-basic-1);
   border-radius: 10px;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.30);
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   padding-inline: 21px 18px;
   padding-block: 20px 23px;
   position: absolute;
@@ -1793,7 +1792,7 @@ a.button:not([href]) {
   display: block;
 }
 
-.tooltip-text:after {
+.tooltip-text::after {
   content: "";
   background-image: url("../images/triangle.svg");
   width: 19px;
