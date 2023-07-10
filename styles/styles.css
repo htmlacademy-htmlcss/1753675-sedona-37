@@ -678,7 +678,7 @@ a.button:not([href]) {
 
 .footer-social-icon.telegram::after {
   -webkit-mask: url("../images/social/telegram.svg") no-repeat center;
-  mask: url("../images/social/vk.svg") no-repeat center;
+  mask: url("../images/social/telegram.svg") no-repeat center;
 }
 
 .footer-social-icon.telegram:hover::after,
@@ -693,7 +693,7 @@ a.button:not([href]) {
 
 .footer-social-icon.youtube::after {
   -webkit-mask: url("../images/social/youtube.svg") no-repeat center;
-  mask: url("../images/social/vk.svg") no-repeat center;
+  mask: url("../images/social/youtube.svg") no-repeat center;
 }
 
 .footer-social-icon.youtube:hover::after,
