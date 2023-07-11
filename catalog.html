@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
             <img class="page-header-logo" src="images/logo.svg" alt="Логотип города Седона." width="140" height="70">
@@ -44,7 +44,7 @@
           </ul>
         </nav>
       </header>
-      <main class="main-container main-catalog">
+      <main class="main-container main-catalog" data-test="main">
         <div class="catalog-wrapper">
           <header class="catalog-header">
             <h1 class="catalog-header-title">Гостиницы Седоны</h1>
@@ -61,7 +61,7 @@
           </header>
           <section class="catalog-filter">
             <h2 class="visually-hidden">Фильтры для списка гостиниц.</h2>
-            <form class="filter" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="filter" action="https://echo.htmlacademy.ru/" method="get" data-test="filter">
               <div class="filter-wrapper">
                 <fieldset class="filter-group">
                   <legend class="filter-caption">Инфраструктура:</legend>
@@ -172,7 +172,7 @@
               </a>
             </div>
           </header>
-          <ul class="hotels-list">
+          <ul class="hotels-list" data-test="catalog">
             <li class="hotels-card">
               <a class="hotels-card-link" href="#">
                 <img class="hotels-card-image" src="images/hotels/hotel-amara.jpg" alt="Вид на звёздное небо из скальной пещеры." width="300" height="212">
@@ -274,7 +274,7 @@
           </ol>
         </section>
       </main>
-      <section class="subscribe subscribe-catalog">
+      <section class="subscribe subscribe-catalog" data-test="subscribe">
         <h2>Подпишитесь на рассылку</h2>
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -283,7 +283,7 @@
           <button class="button subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Наши социальные сети.</h2>
           <ul class="footer-social-list">
