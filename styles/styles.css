@@ -617,6 +617,15 @@ a.button:not([href]) {
   background-color: var(--element-2);
 }
 
+.subscribe-field:disabled {
+  opacity: 0.6;
+}
+
+.subscribe-field:disabled + .subscribe-button {
+  background-color: var(--element-1);
+  cursor: default;
+}
+
 .subscribe-field:not(:disabled):hover,
 .subscribe-field:not(:disabled):focus {
   filter: brightness(95%);
@@ -930,6 +939,10 @@ a.button:not([href]) {
   background-size: contain;
 }
 
+.filter-input[type="checkbox"]:disabled + .filter-checkbox {
+  opacity: 0.3;
+}
+
 .filter-input[type="radio"]:checked + .filter-radio::after {
   content: "";
   display: block;
@@ -942,6 +955,9 @@ a.button:not([href]) {
   left: 5px;
 }
 
+.filter-input[type="radio"]:disabled + .filter-radio {
+  opacity: 0.3;
+}
 
 .filter-checkbox {
   position: absolute;
@@ -995,9 +1011,13 @@ a.button:not([href]) {
   border-radius: 0 4px 4px 0;
 }
 
-.range-input:hover,
-.range-input:focus {
+.range-input:not(:disabled):hover,
+.range-input:not(:disabled):focus {
   background-color: var(--element-3);
+}
+
+.range-input:disabled {
+  opacity: 0.6;
 }
 
 .range-item-min {
@@ -1601,9 +1621,13 @@ a.button:not([href]) {
   border-radius: 4px;
 }
 
-.booking-form-field:hover,
-.booking-form-field:focus {
+.booking-form-field:not(:disabled):hover,
+.booking-form-field:not(:disabled):focus {
   background-color: var(--element-3);
+}
+
+.booking-form-field:disabled {
+  opacity: 0.3;
 }
 
 .booking-form-field-date {
