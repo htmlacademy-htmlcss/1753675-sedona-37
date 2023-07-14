@@ -123,6 +123,7 @@ a.button:not([href]) {
   color: inherit;
   z-index: 1;
   transition: transform 0.3s;
+  margin-block-end: -6px;
 }
 
 .navigation-logo:hover {
@@ -138,7 +139,6 @@ a.button:not([href]) {
 }
 
 .page-header {
-  margin-block-end: -6px;
   min-height: 64px;
 }
 
@@ -153,7 +153,7 @@ a.button:not([href]) {
   max-width: 500px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: start;
   gap: 10px 0;
 }
 
@@ -175,6 +175,7 @@ a.button:not([href]) {
 }
 
 .navigation-link:not(.button) {
+  max-width: 250px;
   padding-inline: 16px;
   padding-block: 20px;
 }
@@ -253,8 +254,7 @@ a.button:not([href]) {
   margin-inline-start: 20px;
   border: none;
   border-radius: 4px;
-  min-width: 160px;
-  max-width: 161px;
+  width: 160px;
   min-height: 36px;
 }
 
@@ -585,6 +585,7 @@ a.button:not([href]) {
   max-width: 684px;
   margin-inline: auto;
   display: flex;
+  align-items: flex-start;
 }
 
 .subscribe-button {
@@ -1319,6 +1320,7 @@ a.button:not([href]) {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px 20px;
+  align-items: start;
 }
 
 .hotels-card-description {
